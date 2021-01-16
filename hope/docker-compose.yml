@@ -11,3 +11,10 @@ services:
       - ./db-data:/docker-entrypoint-initdb.d
     ports:
       - 3306:3306
+  hope:
+    image: hope:v1
+    build:
+      context: .
+      dockerfile: Dockerfile.hope
+    volumes:
+      - ./dataturks-prod.yml:/home/dataturks/dataturks-prod.yml
