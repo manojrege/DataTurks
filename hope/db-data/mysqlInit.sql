@@ -1,3 +1,6 @@
+CREATE SCHEMA IF NOT EXISTS `dataturk` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `dataturk` ;
+
 CREATE TABLE `configs` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(50) NOT NULL,

@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb:10
+    environment:
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./db-data:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
